@@ -91,6 +91,26 @@ public class MaximunNumberTest
 		System.out.println(maximumNum);
 	}
 
+	@Test
+	public void givenMoreParameterNumAtFirstPosition_ShouldReturnSameNum() {
+		Integer maximumNum = MaximumNumber.checkMaximum_With_MoreThan_ThreeParameters(10,20,35,40,45);
+		Assertions.assertEquals(10, maximumNum);
+		System.out.println(maximumNum);
+	}
 
+	@Test
+	public void givenMoreFloatNumAtFirstPosition_ShouldReturnSameNum() {
+		Float maximumNum = MaximumNumber.checkMaximum_With_MoreThan_ThreeParameters(1.2f, 2.3f, 3.4f,4.0f,5.2f);
+		Assertions.assertEquals(1.2f, maximumNum);
+		System.out.println(maximumNum);
+	}
+	
+	
+	@Test
+	public void givenMoreStringNumAtFirstPosition_ShouldReturnSameNum() {
+		String maximumNum = MaximumNumber.checkMaximum_With_MoreThan_ThreeParameters("Apple", "Orange", "Banana", "Watermelon", "Grapes");
+		Assertions.assertEquals("Apple", maximumNum);
+		System.out.println(maximumNum);
+	}
  
 }
