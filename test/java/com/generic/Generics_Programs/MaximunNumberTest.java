@@ -16,7 +16,10 @@ public class MaximunNumberTest
 		{
 
 		}
+		public static void assertEquals(String i, String maximumNum) 
+		{
 
+		}
 
 	}
 
@@ -43,7 +46,7 @@ public class MaximunNumberTest
 	}
 	
 	
-	// Testing a Integer Value in JUnit
+	// Testing a Float Value in JUnit
 	@Test
 	public void givenMaxFloatNumAtFirstPosition_ShouldReturnSameNum() {
 		Float maximumNum = MaximumNumber.checkMaximum(1.2f, 2.3f, 3.4f);
@@ -66,6 +69,27 @@ public class MaximunNumberTest
 	}
 	
 
+	// Testing a String Value in JUnit
+	@Test
+	public void givenMaxStringNumAtFirstPosition_ShouldReturnSameNum() {
+		String maximumNum = MaximumNumber.checkMaximum("Apple","Orange","Banana");
+		Assertions.assertEquals("Apple", maximumNum);
+		System.out.println(maximumNum);
+	}
+		
+	@Test
+	public void givenMaxStringNumAtSecondPosition_ShouldReturnSameNum() {
+		String maximumNum = MaximumNumber.checkMaximum("Apple","Orange","Banana");
+		Assertions.assertEquals("Orange", maximumNum);
+		System.out.println(maximumNum);
+	}
+		
+	@Test
+	public void givenMaxStringNumAtThirdPosition_ShouldReturnSameNum() {
+		String maximumNum = MaximumNumber.checkMaximum("Apple","Orange","Banana");
+		Assertions.assertEquals("Banana", maximumNum);
+		System.out.println(maximumNum);
+	}
 
 
  

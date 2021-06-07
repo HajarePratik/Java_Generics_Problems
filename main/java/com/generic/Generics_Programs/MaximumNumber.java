@@ -26,6 +26,17 @@ public class MaximumNumber
 		return max;
 	}
 	
+	public static String checkMaximum(String x, String y, String z) {
+		String max = x;
+		if(y.compareTo(max) > 0) {
+			max = y; 		
+		}
+		if(z.compareTo(max) > 0) {
+			max = z;
+		}
+		return max;
+	}
+	
 	
 	
 	public static void main(String args[])
@@ -35,6 +46,9 @@ public class MaximumNumber
 		
 		float b = checkMaximum(1.2f, 2.3f, 3.4f);		 // Passing Float Type Input's
 		System.out.println(b);							// Printing Float Large Number 
+		
+		String c = checkMaximum("Apple", "Orange", "Banana");  // Passing String Type Input's
+		System.out.println(c);								// Printing String Large Value with Alphabetic Order 
 		
 	}
 	
